@@ -32,6 +32,9 @@ jobs:
       - name: Variablen object to json
         run: echo "${{ toJson(github) }}"
 
+      - name: Art vom Start der Workflow
+        run: echo Die Workflow wurde durch "${{ github.event_name }}"
+
       - name: Run a one-line script
         run: echo Hello, world!
         
