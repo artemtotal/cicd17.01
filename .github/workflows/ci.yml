@@ -30,7 +30,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Abfrage von der Repo-Variable
-        run: echo "Die Repo-Variable ist $NAME"
+        run: echo "Die Repo-Variable ist ${{ github.env.name }}"
 
       # Runs a single command using the runners shell
       - name: Variablen object
@@ -38,6 +38,9 @@ jobs:
       
       - name: Variablen object to json
         run: echo "${{ toJson(github) }}"
+
+      - name: Variablen object to json
+        run: echo "${{ toJson(vars) }}"
 
       - name: Art vom Start der Workflow
         run: echo `Die Workflow wurde durch "${{ github.event_name }}`
