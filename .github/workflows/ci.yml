@@ -39,8 +39,13 @@ jobs:
       - name: Variablen object to json
         run: echo "${{ toJson(github) }}"
 
+        # Показывается все Variables с гитахаба
       - name: Variablen object to json
         run: echo "${{ toJson(vars) }}"
+      
+        # Секреты показывает ?
+      - name: Beispiel vom Secret
+        run: echo `${{ secrets.MEIN_DP_PASSWORD }}
 
       - name: Art vom Start der Workflow
         run: echo `Die Workflow wurde durch "${{ github.event_name }}`
