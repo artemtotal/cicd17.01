@@ -52,6 +52,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      - name: Platzhalter fuer die Umgebungsvariable
+        run: echo "Die Node Version ist $NODE_VERSION"
       
       - name: ueberprufung node version
         run: node --version
