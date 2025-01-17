@@ -47,6 +47,16 @@ jobs:
       - name: Beispiel vom Secret
         run: echo "${{ secrets.MEIN_DP_PASSWORD }}"
 
+      - name: Save Secret to Artifact
+        run: echo "${{ secrets.MEIN_DB_PASSWORD }}" > test.txt
+      
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: secret-file
+          path: test.txt
+      
+
       - name: Art vom Start der Workflow
         run: echo `Die Workflow wurde durch "${{ github.event_name }}`
 
