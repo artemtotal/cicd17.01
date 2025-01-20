@@ -48,7 +48,7 @@ jobs:
       
         # Секреты показывает ?
       - name: Beispiel vom Secret
-        run: echo "${{ secrets.MEIN_DP_PASSWORD }}"
+        run: echo "${{ secrets.MEIN_DB_PASSWORD }}"
 
       - name: Save Secret to Artifact
         run: echo "${{ secrets.MEIN_DB_PASSWORD }}" > test.txt
