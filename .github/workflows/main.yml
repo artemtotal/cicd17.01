@@ -1,9 +1,12 @@
 name: Hello World! 
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch: # by hand start
+
+# on:
+#   push:
+#     branches:
+#       - main
 
 jobs:
   hello_world_job:
