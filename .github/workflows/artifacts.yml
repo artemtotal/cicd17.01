@@ -1,0 +1,26 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Artifacts-mit-Sophie-21.01
+
+# Controls when the workflow will run
+
+
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+
+jobs:
+    # Ziel von Artefakten: Dateien zwischenspeichern
+    job1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Erzeuge eine Datei
+              run: |
+                echo "Hallo aus Job 1" > output.txt
+                echo "Wir haengen noch etwas an" >> output.txt
+
+            - name: Lade die Datei als Atefakt hoch

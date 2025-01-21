@@ -6,11 +6,12 @@ name: Outputs-mit-Sophie-20.01
 
 
 on:
+  workflow_dispatch:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  # push:
+  #   branches: [ "main" ]
+  # pull_request:
+  #   branches: [ "main" ]
 
 
 jobs:
@@ -31,7 +32,7 @@ jobs:
               run: echo "test=Hallo" >> "$GITHUB_OUTPUT"
             
             - id: stepTwo
-              run: echo "test2=Hallo World" >> "$GITHUB_OUTPUT"
+              run: echo "test2=World" >> "$GITHUB_OUTPUT"
 
     job2:
         runs-on: ubuntu-latest
