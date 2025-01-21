@@ -23,4 +23,4 @@ jobs:
                 echo "Hallo aus Job 1" > output.txt
                 echo "Wir haengen noch etwas an" >> output.txt
 
-            - name: Lade die Datei als Atefakt hoch
+          #  - name: Lade die Datei als Atefakt hoch
