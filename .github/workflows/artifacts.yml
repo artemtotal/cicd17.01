@@ -37,4 +37,14 @@ jobs:
               with:
                 name: secret-file
                 path: test.txt
-              
+    job2:
+        needs: job1
+        runs-on: ubuntu-latest
+        steps:
+            - name: Lade Artefakt herunter
+              uses: actions/download-artifact@v4
+              with:
+                name: job1-output
+
+            - name: Zeigen den Inhalt der Datei an
+              run: cat output.txt
