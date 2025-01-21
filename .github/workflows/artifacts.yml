@@ -47,4 +47,4 @@ jobs:
                 name: job1-output
 
             - name: Zeigen den Inhalt der Datei an
-              run: cat output.txt
+              run: cat output.txt 
