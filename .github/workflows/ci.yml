@@ -49,7 +49,7 @@ jobs:
       - name: Variablen object to json
         run: echo "${{ toJson(vars) }}"
       
-        # Секреты показывает ?
+        # Zeigt secrets?
       - name: Beispiel vom Secret
         run: echo "${{ secrets.MEIN_DB_PASSWORD }}"
 
